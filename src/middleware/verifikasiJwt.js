@@ -30,6 +30,8 @@ module.exports = (request, response, next) => {
                             idToken: resultAkun[0].id_token,
                             admin: resultAkun[0].admin ? true : false,
                             aktif: resultAkun[0].aktif ? true : false,
+                            dibuat: resultAkun[0].dibuat,
+                            diperbarui: resultAkun[0].diperbarui,
                         };
                         request.permission =  decode.permission;
                         next();

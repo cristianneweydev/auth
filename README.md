@@ -1,3 +1,4 @@
+# AUTH
 ## REGISTER
     POST /api/auth/register
     - headers
@@ -35,3 +36,21 @@
     DELETE /api/auth/logout
     - headers
         - Authorization
+
+## CEK SESI
+    POST /api/auth/session
+    - headers
+        - Authorization
+
+# USER
+## DATA AKUN
+    GET /api/user/account
+    - headers
+        - Authorization
+
+## DATA AKUN
+    PUT /api/user/account
+    - headers
+        - Authorization
+    - body
+        - username

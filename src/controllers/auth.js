@@ -112,8 +112,22 @@ class Auth {
     };
     logout = async (request, response) => {
         try {
-            const hasilModel = await model.logout(request.user);
-            response.status(hasilModel.status).json(hasilModel);
+            const { login } = request.permission;
+            if (login !== true) response.status(403).json(this.httpRespon.status403());
+            else {
+                const hasilModel = await model.logout(request.user);
+                response.status(hasilModel.status).json(hasilModel);
+            };
+        } catch(error) {
+            console.error(error);
+            response.status(500).json(this.httpRespon.status500());
+        };
+    };
+    session = (request, response) => {
+        try {
+            const { login } = request.permission;
+            if (login !== true) response.status(403).json(this.httpRespon.status403());
+            else response.status(200).json(this.httpRespon.status200());
         } catch(error) {
             console.error(error);
             response.status(500).json(this.httpRespon.status500());

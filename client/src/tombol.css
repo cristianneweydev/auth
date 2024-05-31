@@ -1,0 +1,27 @@
+.submit {
+    height: 48px;
+    background-color: var(--biru);
+    border: none;
+    border-radius: 8px;
+    color: var(--putih);
+    font-size: medium;
+    font-weight: bold;
+}
+
+.link {
+    color: var(--biru);
+}
+
+.tombol-icon {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: var(--hitam);
+    gap: 8px;
+}
+
+.tombol-icon p {
+    font-size: medium;
+}

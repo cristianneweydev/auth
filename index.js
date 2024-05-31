@@ -4,11 +4,15 @@ const router = {
     client: require("./src/routes/client"),
 };
 const database = require("./src/configs/database");
+const cors = require("cors");
 
 const app = express();
 const serverPort = process.env.SERVER_PORT || 3000;
+const permissionCors = cors({
+    origin: process.env.URL_CORS,
+});
 
-app.use("/api", express.json(), router.client);
+app.use("/api", permissionCors, express.json(), router.client);
 
 app.listen(serverPort, (error) => {
     if (error) console.error(error);

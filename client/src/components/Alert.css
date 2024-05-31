@@ -1,0 +1,138 @@
+div#alert-loading,
+div#alert-kesalahan-no-close {
+    height: 100%;
+    width: 100%;
+    background-color: var(--putih);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+div#alert-loading div#bungkus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+div#alert-loading div#bungkus div#circle {
+    height: 96px;
+    width: 96px;
+    border: 8px solid var(--abu-abu);
+    border-radius: 100%;
+    border-bottom: 8px solid transparent;
+    animation: 1s infinite alert-loading;
+}
+
+@keyframes alert-loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+div#alert-kesalahan-no-close div#bungkus {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 16px;
+    gap: 8px;
+}
+
+div#alert-kesalahan-no-close div#bungkus div#icon {
+    color: var(--abu-abu);
+    font-size: 96px;
+    border-bottom: 1px solid var(--abu-abu);
+    width: 100%;
+    text-align: center;
+}
+
+div#alert-kesalahan-no-close div#bungkus p,
+div#alert-kesalahan div#bungkus div#content p,
+div#alert-berhasil div#bungkus div#content p,
+div#alert-pilihan div#bungkus div#content p {
+    text-align: center;
+}
+
+div#alert-kesalahan,
+div#alert-berhasil,
+div#alert-pilihan {
+    height: 100%;
+    width: 100%;
+    background-color: var(--hitam-transparant);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+div#alert-kesalahan div#bungkus,
+div#alert-berhasil div#bungkus,
+div#alert-pilihan div#bungkus {
+    background-color: var(--putih);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 16px;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+div#alert-kesalahan div#bungkus button#tombol-close,
+div#alert-berhasil div#bungkus button#tombol-close,
+div#alert-pilihan div#bungkus button#tombol-close {
+    margin-left: auto;
+}
+
+div#alert-kesalahan div#bungkus div#content,
+div#alert-berhasil div#bungkus div#content,
+div#alert-pilihan div#bungkus div#content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+div#alert-kesalahan div#bungkus div#content div#icon,
+div#alert-berhasil div#bungkus div#content div#icon,
+div#alert-pilihan div#bungkus div#content div#icon {
+    font-size: 96px;
+    color: var(--abu-abu);
+    border-bottom: 1px solid var(--abu-abu);
+    text-align: center;
+}
+
+div#alert-pilihan div#bungkus div#bungkus-tombol {
+    display: flex;
+}
+
+div#alert-pilihan div#bungkus div#bungkus-tombol button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    background: none;
+}
+
+div#alert-pilihan div#bungkus div#content p {
+    border-bottom: 1px solid var(--abu-abu);
+    padding-bottom: 8px;
+}
+
+@media screen and (min-width: 400px) {
+    div#alert-kesalahan-no-close div#bungkus {
+        width: 368px;
+        margin: 0px;
+    }
+    div#alert-kesalahan div#bungkus,
+    div#alert-berhasil div#bungkus,
+    div#alert-pilihan div#bungkus {
+        width: 336px;
+        margin: 0px;
+    }
+}

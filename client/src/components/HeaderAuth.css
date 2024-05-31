@@ -1,0 +1,20 @@
+header#auth {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--putih);
+}
+
+header#auth div#bungkus {
+    width: 100%;
+    margin: 16px;
+}
+
+@media screen and (min-width: 400px) {
+    header#auth div#bungkus {
+        width: 368px;
+        margin: 16px 0px;
+    }
+}

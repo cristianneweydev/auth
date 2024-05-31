@@ -1,0 +1,46 @@
+main#auth-register,
+main#auth-activation,
+main#auth-login,
+main#auth-recovery,
+main#auth-reset {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+main#auth-register form,
+main#auth-activation div#bungkus,
+main#auth-login form,
+main#auth-recovery form,
+main#auth-reset form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 16px;
+    gap: 16px;
+}
+
+main#auth-register form h1,
+main#auth-activation div#bungkus h1,
+main#auth-login form h1,
+main#auth-recovery form h1,
+main#auth-reset form h1 {
+    margin-bottom: -16px;
+}
+
+main#auth-register form p:nth-child(5),
+main#auth-login form p:nth-child(6) {
+    text-align: center;
+}
+
+@media screen and (min-width: 400px) {
+    main#auth-register form,
+    main#auth-activation div#bungkus,
+    main#auth-login form,
+    main#auth-recovery form,
+    main#auth-reset form {
+        width: 368px;
+        margin: 0px;
+    }
+}

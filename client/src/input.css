@@ -1,0 +1,49 @@
+.bungkus-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input {
+    height: 48px;
+    border: 1px solid var(--abu-abu);
+    padding: 0px 8px;
+    border-radius: 8px;
+    background-color: var(--putih);
+}
+
+.input:focus {
+    border: 1px solid var(--biru);
+    outline: 2px solid var(--biru);
+}
+
+.input::placeholder,
+.input2::placeholder {
+    color: var(--abu-abu);
+}
+
+.input:focus::placeholder,
+.input2:focus::placeholder {
+    color: var(--biru);
+}
+
+.dekorasi-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.dekorasi-input label {
+    font-weight: bold;
+}
+
+.input2 {
+    height: 48px;
+    border: none;
+    border-bottom: 1px solid var(--abu-abu);
+    background-color: var(--putih);
+}
+
+.input2:focus {
+    border-bottom: 2px solid var(--biru);
+    outline: none;
+}

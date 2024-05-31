@@ -1,0 +1,36 @@
+header#index {
+    position: fixed;
+    top: 0;
+    background-color: var(--putih);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid var(--abu-abu);
+}
+
+header#index div#bungkus {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin: 16px;
+}
+
+header#index div#bungkus nav {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+header#index div#bungkus nav a {
+    color: var(--hitam);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1920px) {
+    header#index div#bungkus {
+        width: 1888px;
+        margin: 16px 0px;
+    }
+}

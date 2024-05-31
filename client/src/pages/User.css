@@ -1,0 +1,61 @@
+main#user {
+    display: flex;
+    justify-content: center;
+}
+
+main#user div#bungkus {
+    width: 100%;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main#user div#bungkus form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main#user div#bungkus form div.dekorasi-edit {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+main#user div#bungkus form div.dekorasi-edit button.tombol-icon {
+    color: var(--biru);
+}
+
+main#user div#bungkus form div.dekorasi-edit div.dekorasi-input {
+    width: 100%;
+}
+
+main#user div#bungkus form button.submit {
+    display: none;
+}
+
+main#user div#bungkus div#bungkus-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media screen and (min-width: 1280px) {
+    main#user div#bungkus {
+        flex-direction: row;
+    }
+    main#user div#bungkus form {
+        width: 100%;
+        border-right: 1px solid var(--abu-abu);
+        padding-right: 16px;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    main#user div#bungkus {
+        width: 1888px;
+        margin: 16px 0px;
+    }
+}
