@@ -48,7 +48,7 @@
     - headers
         - Authorization
 
-## DATA AKUN
+## UPDATE AKUN
     PUT /api/user/account
     - headers
         - Authorization
