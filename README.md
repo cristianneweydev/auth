@@ -48,9 +48,27 @@
     - headers
         - Authorization
 
-## UPDATE AKUN
-    PUT /api/user/account
+## UPDATE USERNAME
+    PUT /api/user/account/username?value=example
     - headers
         - Authorization
-    - body
-        - username
+
+## UPDATE EMAIL
+    PUT /api/user/account/email?value=example@example.com
+    - headers
+        - Authorization
+
+## KONFIRMASI UPDATE EMAIL
+    POST /api/user/account/email/confirmation?code=3XAMP
+    - headers
+        - Authorization
+
+## SIMPAN PERUBAHAN EMAIL
+    PUT /api/user/account/email/confirmation/save
+    - headers
+        - Authorization
+
+## DATA ALL USER
+    GET /api/user
+    - headers
+        - Authorization(admin)
