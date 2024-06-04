@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2024 at 05:03 PM
+-- Generation Time: Jun 04, 2024 at 03:38 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -36,7 +36,9 @@ CREATE TABLE `akun` (
   `admin` tinyint(1) NOT NULL DEFAULT 0,
   `aktif` tinyint(1) NOT NULL DEFAULT 0,
   `dibuat` timestamp NOT NULL DEFAULT current_timestamp(),
-  `diperbarui` timestamp NULL DEFAULT NULL
+  `diperbarui` timestamp NULL DEFAULT NULL,
+  `email_baru` varchar(254) DEFAULT NULL,
+  `kode_verifikasi` char(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -57,7 +59,7 @@ ALTER TABLE `akun`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

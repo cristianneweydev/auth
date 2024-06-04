@@ -11,28 +11,28 @@ main#user div#bungkus {
     gap: 16px;
 }
 
-main#user div#bungkus form {
+main#user div#bungkus div#bungkus-data-user {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-main#user div#bungkus form div.dekorasi-edit {
+main#user div#bungkus div#bungkus-data-user h2 {
+    margin-bottom: -16px;
+}
+
+main#user div#bungkus div#bungkus-data-user div.dekorasi-edit {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-main#user div#bungkus form div.dekorasi-edit button.tombol-icon {
+main#user div#bungkus div#bungkus-data-user div.dekorasi-edit button.tombol-icon {
     color: var(--biru);
 }
 
-main#user div#bungkus form div.dekorasi-edit div.dekorasi-input {
+main#user div#bungkus div#bungkus-data-user div.dekorasi-edit div.dekorasi-input {
     width: 100%;
-}
-
-main#user div#bungkus form button.submit {
-    display: none;
 }
 
 main#user div#bungkus div#bungkus-menu {
@@ -41,11 +41,88 @@ main#user div#bungkus div#bungkus-menu {
     gap: 16px;
 }
 
+main#user-konfirmasi-perubahan {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+main#user-konfirmasi-perubahan div#bungkus {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 16px;
+    gap: 16px;
+}
+
+main#user-konfirmasi-perubahan div#bungkus h1 {
+    margin-bottom: -16px;
+}
+
+main#admin-user {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+main#admin-user div#bungkus {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+main#admin-user div#bungkus h2 {
+    margin-bottom: -16px;
+}
+
+main#admin-user div#bungkus div#tabel-scroll {
+    max-height: 100vh;
+    overflow: scroll;
+    border: 1px solid var(--abu-abu);
+}
+
+main#admin-user div#bungkus div#tabel-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+main#admin-user div#bungkus div#tabel-scroll table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+main#admin-user div#bungkus div#tabel-scroll table thead {
+    position: sticky;
+    top: 0px;
+    background-color: var(--putih);
+}
+
+main#admin-user div#bungkus div#tabel-scroll table thead tr th {
+    border: 1px solid var(--abu-abu);
+    text-align: left;
+    padding: 8px;
+}
+
+main#admin-user div#bungkus div#tabel-scroll table tbody tr td {
+    border: 1px solid var(--abu-abu);
+    text-align: left;
+    padding: 8px;
+    text-wrap: nowrap;
+}
+
+@media screen and (min-width: 400px) {
+    main#user-konfirmasi-perubahan div#bungkus {
+        width: 368px;
+        margin: 0px;
+    }
+}
+
 @media screen and (min-width: 1280px) {
     main#user div#bungkus {
         flex-direction: row;
     }
-    main#user div#bungkus form {
+    main#user div#bungkus div#bungkus-data-user {
         width: 100%;
         border-right: 1px solid var(--abu-abu);
         padding-right: 16px;
@@ -55,6 +132,13 @@ main#user div#bungkus div#bungkus-menu {
 
 @media screen and (min-width: 1920px) {
     main#user div#bungkus {
+        width: 1888px;
+        margin: 16px 0px;
+    }
+    main#admin-user {
+        padding: 16px 0px;
+    }
+    main#admin-user div#bungkus {
         width: 1888px;
         margin: 16px 0px;
     }

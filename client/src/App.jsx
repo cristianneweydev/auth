@@ -16,7 +16,12 @@ import {
 } from "./pages/Auth";
 import PageNotFound from "./pages/PageNotFound";
 import { useEffect } from "react";
-import { User } from "./pages/User";
+import HeaderAdmin from "./components/HeaderAdmin";
+import {
+    User,
+    KonfirmasiEmailUpdate,
+    AdminUser,
+} from "./pages/User";
 
 export default () => {
     const authorization = JSON.parse(localStorage.getItem("authorization"));
@@ -24,9 +29,12 @@ export default () => {
         const element = {
             auth: document.querySelector(".auth"),
             nonAuth: document.querySelector(".non-auth"),
+            admin: document.querySelector(".admin"),
         };
         if (!authorization && element.auth) element.auth.style.display = "none";
         if (authorization && element.nonAuth) element.nonAuth.style.display = "none";
+        if (!authorization && element.admin) element.admin.style.display = "none";
+        if (authorization && authorization.admin !== true && element.admin) element.admin.style.display = "none";
     });
     const cekSesi = async () => {
         try {
@@ -53,6 +61,7 @@ export default () => {
                     {
                         authorization ? <Route path="user" element={ <User /> } /> : null
                     }
+                    <Route path="user/account/email/confirmation/save" element={ <KonfirmasiEmailUpdate /> } />
                 </Route>
                 {
                     authorization ? null :
@@ -70,6 +79,15 @@ export default () => {
                     <Route path="recovery" element={ <Recovery /> } />
                     <Route path="recovery/reset" element={ <Reset /> } />
                 </Route>
+                {
+                    authorization ?
+                        authorization.admin ?
+                        <Route path="/admin" element={ <HeaderAdmin /> }>
+                            <Route path="user" element={ <AdminUser /> } />
+                        </Route>
+                        : null
+                    : null
+                }
                 <Route path="*" element={ <PageNotFound /> } />
             </Routes>
         </BrowserRouter>

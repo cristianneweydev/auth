@@ -78,7 +78,6 @@ const Activation = () => {
             const dataFetch = {
                 method: "PUT",
                 headers: {
-                    "Content-Type": "application/json",
                     "Authorization": tokenQuery,
                 },
             };
@@ -235,7 +234,7 @@ const Reset = () => {
                     <p>Silahkan masukan email dan password akun anda</p>
                     <div className="bungkus-input">
                         <input id="password" className="input" type="password" placeholder="password" minLength="8" required />
-                        <input id="konfirmasi" className="input" type="password" placeholder="password" minLength="8" required />
+                        <input id="konfirmasi" className="input" type="password" placeholder="konfirmasi" minLength="8" required />
                     </div>
                     <button className="submit" type="submit">masuk</button>
                     <p>Setelah berhasil mereset password berikutnya anda akan diarahkan untuk ke halaman login</p>

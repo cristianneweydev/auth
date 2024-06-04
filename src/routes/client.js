@@ -8,8 +8,8 @@ const { rateLimit } = require("express-rate-limit");
 
 const router = express.Router();
 const limiter = rateLimit({
-    windowMs: 60 * 60 * 1000,
-    limit: 10,
+    windowMs: 60 * 1000,
+    limit: 20,
 });
 
 router.post("/auth/register", limiter, controller.auth.register);
@@ -22,6 +22,9 @@ router.delete("/auth/logout", limiter, verifikasiJwt, controller.auth.logout);
 router.post("/auth/session", verifikasiJwt, controller.auth.session);
 
 router.get("/user/account", verifikasiJwt, controller.user.dataUser);
-router.put("/user/account", verifikasiJwt, controller.user.update);
+router.put("/user/account/username", limiter, verifikasiJwt, controller.user.updateUsername);
+router.put("/user/account/email", limiter, verifikasiJwt, controller.user.updateEmail);
+router.post("/user/account/email/confirmation", limiter, verifikasiJwt, controller.user.konfirmasiUpdateEmail);
+router.put("/user/account/email/confirmation/save", limiter, verifikasiJwt, controller.user.simpanPerubahanEmail);
 
 module.exports = router;

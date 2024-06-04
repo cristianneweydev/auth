@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const router = {
     client: require("./src/routes/client"),
+    admin: require("./src/routes/admin"),
 };
 const database = require("./src/configs/database");
 const cors = require("cors");
@@ -12,7 +13,7 @@ const permissionCors = cors({
     origin: process.env.URL_CORS,
 });
 
-app.use("/api", permissionCors, express.json(), router.client);
+app.use("/api", permissionCors, express.json(), router.client, router.admin);
 
 app.listen(serverPort, (error) => {
     if (error) console.error(error);

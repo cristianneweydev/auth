@@ -47,3 +47,56 @@
     border-bottom: 2px solid var(--biru);
     outline: none;
 }
+
+div#element-input-edit {
+    height: 100%;
+    width: 100%;
+    background-color: var(--hitam-transparant);
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#element-input-edit button#tombol-close {
+    margin-left: auto;
+}
+
+div#element-input-edit form {
+    background-color: var(--putih);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    gap: 16px;
+    width: 100%;
+    margin: 0px 16px;
+}
+
+div.bungkus-input-pencarian {
+    display: flex;
+    border: 1px solid var(--abu-abu);
+    border-radius: 8px;
+    background-color: var(--putih);
+}
+
+div.bungkus-input-pencarian input {
+    width: 100%;
+    border: none;
+    padding-left: 8px;
+    background: none;
+    border-radius: 0px 0px 0px 8px;
+}
+
+div.bungkus-input-pencarian button {
+    height: 100%;
+    padding: 0px 8px;
+}
+
+@media screen and (min-width: 400px) {
+    div#element-input-edit form {
+        width: 336px;
+        margin: 0px;
+    }
+}

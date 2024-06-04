@@ -12,12 +12,7 @@ export default () => {
         <>
             <header id="index">
                 <div id="bungkus">
-                    <div style={ {
-                        height: "48px",
-                        width: "48px",
-                        backgroundColor: "var(--hitam)",
-                        borderRadius: "100px",
-                    } }></div>
+                    <div id="logo"></div>
                     <nav>
                         <a href="/">HOME</a>
                         <a className="non-auth" href="/auth/login">LOGIN</a>

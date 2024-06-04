@@ -1,4 +1,4 @@
-header#auth {
+header#admin {
     display: flex;
     justify-content: center;
     position: fixed;
@@ -7,16 +7,16 @@ header#auth {
     background-color: var(--putih);
 }
 
-header#auth div#bungkus {
+header#admin div#bungkus {
     width: 100%;
     margin: 16px;
     display: flex;
     justify-content: start;
 }
 
-@media screen and (min-width: 400px) {
-    header#auth div#bungkus {
-        width: 368px;
+@media screen and (min-width: 1920px) {
+    header#admin div#bungkus {
+        width: 1888px;
         margin: 16px 0px;
     }
 }

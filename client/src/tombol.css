@@ -24,4 +24,5 @@
 
 .tombol-icon p {
     font-size: medium;
+    text-wrap: nowrap;
 }

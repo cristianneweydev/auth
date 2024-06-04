@@ -16,6 +16,14 @@ header#index div#bungkus {
     margin: 16px;
 }
 
+header#index div#bungkus div#logo {
+    height: 48px;
+    width: 48px;
+    background-image: url("/image/logo.png");
+    background-position: center;
+    background-size: 48px;
+}
+
 header#index div#bungkus nav {
     display: flex;
     gap: 16px;
